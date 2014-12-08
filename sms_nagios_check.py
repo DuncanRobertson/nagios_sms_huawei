@@ -10,7 +10,7 @@
 # see sms_sanity_check.py for a complete check of SMS functionality by sending an SMS and checking it is received.
 #
 # Pin of SIM card
-PIN = 5907
+PIN = 1234
 MODEMMODEL = 'E122'
 
 TIMEOUT=120
