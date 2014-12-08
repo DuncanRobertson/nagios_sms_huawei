@@ -10,8 +10,10 @@
 # see sms_sanity_check.py for a complete check of SMS functionality by sending an SMS and checking it is received.
 #
 # Pin of SIM card
-PIN = 1234
+PIN = 5907
 MODEMMODEL = 'E122'
+
+TIMEOUT=120
 
 import humod, sys, string, lockfile
 
@@ -19,8 +21,12 @@ lock = lockfile.FileLock("/tmp/sms_client_huawei")
 
 if lock.is_locked():
    print "modem locked, so we will wait..."
-lock.acquire(timeout=120)
 
+try:
+   lock.acquire(timeout=TIMEOUT)
+except lockfile.LockTimeout:
+   print "couldn't acquire lock on modem in within timeout ",TIMEOUT," seconds."
+   sys.exit(2)
 
 errcode = 0
 try:
