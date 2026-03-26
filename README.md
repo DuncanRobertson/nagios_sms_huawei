@@ -1,12 +1,8 @@
-nagios_sms_huawei
-=================
+# nagios_sms_huawei
 
-SMS Client Implementation for Huawei USB 3G dongles intended for use with Nagios
+This repository has moved to Codeberg:
+https://codeberg.org/DuncanRobertson/nagios_sms_huawei
 
-Requires the pyhumod module from https://github.com/oozie/pyhumod/
+---
 
-Linux kernel needs usb-modeswitch working.
-
-This has only been tested with model E122
-
-
+Further reading: [Why we left Microsoft/GitHub cloud infrastructure](https://www.propublica.org/article/microsoft-cloud-fedramp-cybersecurity-government)
